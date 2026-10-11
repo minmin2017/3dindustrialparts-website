@@ -1,0 +1,24 @@
+# 3D Industrial Parts
+
+3D Industrial Parts is an industrial 3D printing and engineering-parts service in Thailand. The business produces functional components for real-world use, rather than decorative models or toys.
+
+## Core services
+
+- Functional parts for machinery, production lines, R&D and product development
+- Jig and fixture design and production
+- Replacement parts based on STEP, STL, 3MF, drawings, samples or dimensioned photographs
+- Prototypes for fit, assembly and design validation
+- Low-volume production, generally from 5 to 200 parts after engineering review
+
+## Materials
+
+Material selection is based on load, temperature, chemicals, UV exposure, dimensional requirements and operating environment. Candidate materials include PETG, ASA, PC, PA/Nylon, TPU and fiber-reinforced composites. Final availability and suitability are confirmed after design review.
+
+## Quotation requirements
+
+For an accurate quotation, provide the 3D file or dimensioned images, quantity, part function, load, temperature, chemical exposure, critical dimensions and required delivery date.
+
+## Contact
+
+Website: https://www.3dindustrialparts.com/
+LINE quotation: https://line.me/R/ti/p/%40494plfkr
