@@ -1,0 +1,9 @@
+/* MASTER DESIGN TOKENS - 3dindustrialparts.com main site + order.3dindustrialparts.com shop pages.
+   Same values are inlined in the <style id="brand-theme"> block of the shop pages (order/materials/about/location.html).
+   Change here first, then copy to both places. Button text/background pairs are >= 4.5:1 (white on #0077c2 = 4.76). */
+:root{
+  --bg:#05080d;--panel:#0b1119;--panel2:#0f1823;--line:#1c2a38;--text:#edf4fb;--muted:#9caebe;
+  --blue:#00a8ff;--cyan:#61d6ff;
+  --btn-from:#005f9e;--btn-to:#0077c2;--btn-border:#35c5ff;--btn-text:#ffffff;
+  --font-head:"Chakra Petch","Noto Sans Thai",system-ui,sans-serif;--font-body:"Noto Sans Thai",Inter,system-ui,sans-serif
+}
