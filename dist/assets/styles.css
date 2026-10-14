@@ -84,9 +84,9 @@ summary{min-height:44px;align-items:center;gap:16px}
 
 /* MATERIALS-ART: per-material layered illustration */
 .mat-art{display:none}
-.js-mat .mat-art{display:block;height:150px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(120% 90% at 50% 100%,#0f2233,#08111b)}
+.js-mat .mat-art{display:block;height:200px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(120% 90% at 50% 100%,#0f2233,#08111b)}
 .js-mat .mat-art canvas{display:block;width:100%;height:100%}
-.js-mat .mat-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.js-mat .mat-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}
 .js-mat .mat-btn b{margin:14px 26px 0}
 .js-mat .mat-btn span:not(.mat-art){margin:4px 26px 0}
 .js-mat .apps{top:198px;bottom:auto;padding-bottom:0}

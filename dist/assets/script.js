@@ -100,5 +100,4 @@
     c.addEventListener('mat:open', o.replay);
     c.addEventListener('mat:close', function(){ cancelAnimationFrame(raf); done(); });
   });
-  if (st.length && st.every(function(o){ return o.ph; })) { var n = g.querySelector('.mat-note'); if (n) n.remove(); }
 })();
