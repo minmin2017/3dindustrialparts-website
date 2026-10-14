@@ -1,0 +1,10 @@
+/* PRINT-FX: hero "being 3D-printed" reveal. Remove the 3 lines in index.html marked PRINT-FX to disable. */
+.hero-copy{position:relative}
+.js-print .hero-copy{clip-path:inset(100% -48px -48px -48px);animation:pf-safe .01s 4s forwards}
+@keyframes pf-safe{to{clip-path:none}}
+.pf-line,.pf-tex{position:absolute;left:-24px;right:-24px;pointer-events:none;z-index:3}
+.pf-line{top:0;height:2px;background:linear-gradient(90deg,transparent,#00a8ff 12%,#7fd4ff 50%,#00a8ff 88%,transparent);box-shadow:0 0 10px 1px rgba(0,168,255,.7),0 6px 18px rgba(0,168,255,.35);will-change:transform}
+.pf-line:after{content:"";position:absolute;left:0;right:0;top:2px;height:16px;background:linear-gradient(rgba(0,168,255,.22),transparent)}
+.pf-spot{position:absolute;left:0;top:-5px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px rgba(127,212,255,.95),0 0 30px 10px rgba(0,168,255,.55);will-change:transform}
+.pf-tex{top:0;left:0;right:0;background:repeating-linear-gradient(180deg,rgba(5,8,13,.5) 0 1px,rgba(0,168,255,.1) 1px 2px,transparent 2px 3px);opacity:0}
+@media(prefers-reduced-motion:reduce){.js-print .hero-copy{clip-path:none;animation:none}.pf-line,.pf-tex{display:none}}
