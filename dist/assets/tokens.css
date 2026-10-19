@@ -1,9 +1,159 @@
-/* MASTER DESIGN TOKENS - 3dindustrialparts.com main site + order.3dindustrialparts.com shop pages.
-   Same values are inlined in the <style id="brand-theme"> block of the shop pages (order/materials/about/location.html).
-   Change here first, then copy to both places. Button text/background pairs are >= 4.5:1 (white on #0077c2 = 4.76). */
-:root{
-  --bg:#05080d;--panel:#0b1119;--panel2:#0f1823;--line:#1c2a38;--text:#edf4fb;--muted:#9caebe;
-  --blue:#00a8ff;--cyan:#61d6ff;
-  --btn-from:#005f9e;--btn-to:#0077c2;--btn-border:#35c5ff;--btn-text:#ffffff;
-  --font-head:"Chakra Petch","Noto Sans Thai",system-ui,sans-serif;--font-body:"Noto Sans Thai",Inter,system-ui,sans-serif
+/* MASTER DESIGN TOKENS - 3dindustrialparts.com landing page (landing_v5b)
+   Lively engineering theme: vivid blue/teal hero + warm filament accents.
+   Alternating full-bleed tinted sections (very light blue, white, very light slate, ice blue)
+   with at most ONE dark band (the 100% Real Shop Production band).
+   All text/background pairs computed and verified WCAG AA (>= 4.5:1).
+   Dark-mode variant defined under prefers-color-scheme: dark.
+*/
+:root {
+  --max: 1200px;
+  --bg: #ffffff;
+  --panel: #0b1522;
+  --panel2: #0f1c2d;
+  --line: #e2e8f0;
+  --text: #0f172a;
+  --muted: #334155;
+
+  /* Primary Brand (Vivid Engineering Blue) */
+  --primary: #0066b3;
+  --primary-hover: #005291;
+  --primary-bright: #00a8ff;
+  --primary-cyan: #38bdf8;
+  --primary-surface: #e0f2fe;
+  --primary-text-on-surface: #0369a1;
+
+  /* Warm Accent (Filament Orange / Technical Amber) */
+  --accent-orange: #ff781f;
+  --accent-orange-bright: #ff9d3b;
+  --accent-warm: #c2410c;
+  --accent-warm-hover: #9a3412;
+  --accent-warm-surface: #ffedd5;
+  --accent-warm-text-on-surface: #9a3412;
+  --accent-amber: #f59e0b;
+
+  /* Auxiliary Accents */
+  --accent-green: #10b981;
+  --accent-green-surface: #d1fae5;
+  --accent-green-text: #047857;
+  --accent-violet: #7c3aed;
+  --accent-violet-surface: #ede9fe;
+  --accent-violet-text: #5b21b6;
+  --accent-rose: #e11d48;
+  --accent-rose-surface: #ffe4e6;
+  --accent-rose-text: #9f1239;
+
+  /* Button Tokens (WCAG AA: Contrast >= 4.5:1) */
+  --btn-primary-bg: #c2410c;
+  --btn-primary-hover: #9a3412;
+  --btn-primary-active: #7c2d12;
+  --btn-primary-border: #ea580c;
+  --btn-primary-text: #ffffff;
+
+  --btn-from: #005f9e;
+  --btn-to: #0070ba;
+  --btn-border: #38bdf8;
+  --btn-text: #ffffff;
+
+  /* Full-Bleed Section Backgrounds (Light Default) */
+  --section-hero-bg: linear-gradient(135deg, #013766 0%, #005a9c 45%, #026ca8 75%, #027dae 100%);
+  --section-how-bg: #f0f7ff;
+  --section-usecases-bg: #ffffff;
+  --section-materials-bg: #f8fafc;
+  --section-dark-band: #070e17;
+  --section-intake-bg: #f1f6fb;
+  --section-faq-bg: #ffffff;
+  --section-closing-bg: linear-gradient(135deg, #002e54 0%, #004d80 50%, #0066b3 100%);
+
+  /* Hero Specific Tokens */
+  --hero-text: #ffffff;
+  --hero-lead: #dbeafe;
+  --hero-eyebrow: #7dd3fc;
+  --hero-eyebrow-line: #38bdf8;
+
+  /* Card A: 3D Printing Accent (Electric Blue / Cyan) */
+  --accent-print: #00a8ff;
+  --accent-print-bright: #61d6ff;
+  --accent-print-glow: rgba(0, 168, 255, 0.35);
+  --accent-print-border: rgba(0, 168, 255, 0.6);
+  --accent-print-bg: rgba(4, 20, 38, 0.92);
+  --btn-print-from: #005f9e;
+  --btn-print-to: #0070ba;
+  --btn-print-border: #38bdf8;
+
+  /* Card B: Reverse Engineering Accent (Warm Amber / Filament Orange) */
+  --accent-reverse: #ff781f;
+  --accent-reverse-bright: #ffb347;
+  --accent-reverse-glow: rgba(255, 120, 31, 0.35);
+  --accent-reverse-border: rgba(255, 120, 31, 0.6);
+  --accent-reverse-bg: rgba(38, 18, 4, 0.92);
+  --btn-reverse-from: #b44400;
+  --btn-reverse-to: #c2410c;
+  --btn-reverse-border: #fb923c;
+
+  /* Clean Light Background Section Tokens */
+  --section-light-bg: #f8fafc;
+  --section-light-bg-alt: #ffffff;
+  --card-light-bg: #ffffff;
+  --card-light-border: #e2e8f0;
+  --card-light-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --text-dark: #0f172a;
+  --text-dark-muted: #334155;
+  --text-dark-subtle: #475569;
+  --light-line: #e2e8f0;
+
+  /* Material Color Chips */
+  --mat-pla: #2563eb;
+  --mat-petg: #059669;
+  --mat-asa: #d97706;
+  --mat-tpu: #7c3aed;
+  --mat-pa: #dc2626;
+  --mat-cf: #334155;
+
+  /* Dark Band Tokens (100% Real Shop Production only) */
+  --dark-panel: #0b1522;
+  --dark-border: #1e354d;
+  --dark-text: #f1f5f9;
+  --dark-muted: #94a3b8;
+
+  /* Nav Header Sticky */
+  --nav-bg: rgba(1, 38, 70, 0.92);
+  --nav-border: rgba(255, 255, 255, 0.12);
+
+  --font-head: "Chakra Petch", "Noto Sans Thai", system-ui, sans-serif;
+  --font-body: "Noto Sans Thai", Inter, system-ui, sans-serif;
+}
+
+/* Dark-mode variant under prefers-color-scheme: dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #070e17;
+    --text: #f1f5f9;
+    --muted: #cbd5e1;
+    --line: #1b2f44;
+
+    --section-hero-bg: linear-gradient(135deg, #051426 0%, #08213d 50%, #0c3358 100%);
+    --section-how-bg: #081524;
+    --section-usecases-bg: #060b13;
+    --section-materials-bg: #09131f;
+    --section-dark-band: #070e17;
+    --section-intake-bg: #081422;
+    --section-faq-bg: #060b12;
+    --section-closing-bg: linear-gradient(120deg, #0c1924 0%, #071019 100%);
+
+    --section-light-bg: #09121d;
+    --section-light-bg-alt: #060b12;
+    --card-light-bg: #0e1926;
+    --card-light-border: #1b2f44;
+    --card-light-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+    --text-dark: #f1f5f9;
+    --text-dark-muted: #cbd5e1;
+    --text-dark-subtle: #94a3b8;
+    --light-line: #1b2f44;
+
+    --nav-bg: rgba(4, 12, 20, 0.95);
+    --nav-border: rgba(255, 255, 255, 0.08);
+
+    --accent-print-bg: rgba(3, 14, 28, 0.95);
+    --accent-reverse-bg: rgba(28, 12, 3, 0.95);
+  }
 }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>รับพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม | 3D Industrial Parts</title>
-  <meta name="description" content="บริการพิมพ์ 3D ชิ้นส่วนเชิงวิศวกรรมสำหรับใช้งานจริง รับผลิต Functional Parts, Jig & Fixture, อะไหล่ทดแทน, Prototype และงานจำนวนน้อยในประเทศไทย">
+  <title>รับพิมพ์ 3D งานวิศวกรรม รับแกะแบบ | 3D Industrial Parts</title>
+  <meta name="description" content="รับพิมพ์ 3D ชิ้นส่วนใช้งานจริง ABS PETG ไนลอน คาร์บอนไฟเบอร์ TPU ประเมินราคาออนไลน์ 24 ชม. รับแกะแบบจากชิ้นงานจริง สำหรับโรงงาน ช่างซ่อมบำรุง ทีม R&D">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="3D Industrial Parts">
   <link rel="canonical" href="https://www.3dindustrialparts.com/">
@@ -12,21 +12,35 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="th_TH">
   <meta property="og:site_name" content="3D Industrial Parts">
-  <meta property="og:title" content="รับพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม | 3D Industrial Parts">
-  <meta property="og:description" content="ชิ้นส่วน 3D Printing เชิงวิศวกรรมสำหรับใช้งานจริง ตั้งแต่งานต้นแบบ 1 ชิ้นถึงการผลิตจำนวนน้อย">
+  <meta property="og:title" content="รับพิมพ์ 3D งานวิศวกรรม | รับแกะแบบ | ประเมินราคาออนไลน์">
+  <meta property="og:description" content="อัปโหลดไฟล์ ดูราคาประเมินทันที หรือส่งชิ้นงานจริงให้เราแกะแบบ 3D ให้">
   <meta property="og:url" content="https://www.3dindustrialparts.com/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="รับพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม | 3D Industrial Parts">
-  <meta name="twitter:description" content="Functional Parts, Jig & Fixture, Replacement Parts, Prototype และ Low Volume Production ในประเทศไทย">
+  <meta property="og:image" content="https://www.3dindustrialparts.com/assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://www.3dindustrialparts.com/assets/og-cover.jpg">
+  <link rel="preload" as="image" href="assets/media/card-print.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/media/dial-caliper-inspection.webp" type="image/webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="รับพิมพ์ 3D งานวิศวกรรม | รับแกะแบบ | ประเมินราคาออนไลน์">
+  <meta name="twitter:description" content="อัปโหลดไฟล์ ดูราคาประเมินทันที หรือส่งชิ้นงานจริงให้เราแกะแบบ 3D ให้">
   <meta name="theme-color" content="#05080d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305080d'/%3E%3Cpath d='M12 18h18l8 8v20H12z' fill='none' stroke='%2300a8ff' stroke-width='5'/%3E%3Cpath d='M30 18h22v28H30M30 31h14' fill='none' stroke='%23e7edf5' stroke-width='5'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/tokens.css?v=20261014b">
-  <link rel="stylesheet" href="assets/styles.css?v=20261014c">
-  <link rel="stylesheet" href="assets/print-fx.css?v=20261014a"><!-- PRINT-FX -->
-  <script>/* PRINT-FX */try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("js-print")}catch(e){}</script>
+  <link rel="stylesheet" href="assets/tokens.css?v=20261019c">
+  <link rel="stylesheet" href="assets/styles.css?v=20261019c">
+  <script>
+    /**
+     * CONFIG: Price chips visibility
+     * The shop owner is currently reviewing pricing formulas.
+     * Default: false (OFF for 100 baht chip and ON for nothing else).
+     * When true: shows preliminary starting price chips.
+     * When false: shows direct action cues ("ลากไฟล์ดูราคาทันที").
+     */
+    const SHOW_PRICE_CHIPS = false;
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,18 +68,62 @@
         "@id": "https://www.3dindustrialparts.com/#service",
         "name": "บริการพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม",
         "alternateName": "Industrial 3D Printing Service Thailand",
-        "serviceType": ["Functional Parts", "Jig & Fixture", "Replacement Parts", "Prototype", "Low Volume Production"],
+        "serviceType": ["Functional Parts", "Jig & Fixture", "Replacement Parts", "Prototype", "Low Volume Production", "Reverse Engineering / รับแกะแบบ 3D"],
         "provider": {"@id": "https://www.3dindustrialparts.com/#organization"},
         "areaServed": {"@type": "Country", "name": "Thailand"},
-        "audience": {"@type": "BusinessAudience", "audienceType": "Factories, machine builders, maintenance teams, R&D teams and product developers"}
+        "audience": {"@type": "BusinessAudience", "audienceType": "Factories, machine builders, maintenance teams, R&D teams and engineers"}
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type":"Question","name":"รับพิมพ์ 3D สำหรับใช้งานจริงหรือไม่?","acceptedAnswer":{"@type":"Answer","text":"รับผลิตชิ้นส่วนสำหรับใช้งานจริง โดยเลือกวัสดุ โครงสร้าง และทิศทางการพิมพ์ตามแรง อุณหภูมิ สารเคมี แสง UV และสภาพแวดล้อมของงาน"}},
-          {"@type":"Question","name":"ไม่มีไฟล์ 3D สามารถส่งชิ้นงานตัวอย่างหรือรูปถ่ายได้หรือไม่?","acceptedAnswer":{"@type":"Answer","text":"ได้ สามารถส่งชิ้นงานตัวอย่าง Drawing แบบร่าง หรือรูปถ่ายหลายมุมพร้อมขนาด เพื่อประเมินความเป็นไปได้ในการสร้างแบบและผลิต"}},
-          {"@type":"Question","name":"รับผลิตขั้นต่ำกี่ชิ้น?","acceptedAnswer":{"@type":"Answer","text":"รับตั้งแต่งานต้นแบบ 1 ชิ้นจนถึงการผลิตจำนวนน้อยประมาณ 5–200 ชิ้น โดยตรวจความเหมาะสมของแบบและกระบวนการก่อนเสนอราคา"}},
-          {"@type":"Question","name":"ต้องส่งข้อมูลอะไรเพื่อประเมินราคา?","acceptedAnswer":{"@type":"Answer","text":"ส่งไฟล์ STEP, STL หรือ 3MF หรือรูปพร้อมขนาด ระบุจำนวน หน้าที่การใช้งาน แรง อุณหภูมิ สารเคมี จุดควบคุมขนาด และวันที่ต้องการใช้"}}
+          {
+            "@type": "Question",
+            "name": "รองรับไฟล์ 3D นามสกุลใดบ้าง?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ระบบรองรับไฟล์ STEP, STL และ 3MF โดยทางร้านแนะนำให้ส่งไฟล์ STEP สำหรับงานวิศวกรรม เนื่องจากเป็นข้อมูล B-Rep ที่รักษาความแม่นยำของเส้นผ่านศูนย์กลางรูเจาะและระนาบประกบได้สมบูรณ์"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ราคาที่คำนวณบนหน้าเว็บเป็นราคาสุดท้ายเลยหรือไม่?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ราคาบนหน้าเว็บเป็นราคาประเมินเบื้องต้นจากปริมาตรเนื้อวัสดุและเวลาพิมพ์ ทางทีมวิศวกรของร้านจะตรวจสอบความหนาผนัง โครงสร้างรับแรง และทิศทางการพิมพ์ จากนั้นจะยืนยันราคาสุดท้ายให้คุณอนุมัติก่อนเริ่มดำเนินการผลิตจริงทุกครั้ง"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ใช้เวลาผลิตและจัดส่งกี่วัน มีการรับประกันเวลาแน่นอนหรือไม่?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ระยะเวลาการผลิตขึ้นอยู่กับคิวงานจริงของเครื่องพิมพ์ในขณะนั้น ความยาวนานของรอบพิมพ์ และขั้นตอนตรวจสอบขนาด เราจะแจ้งประมาณการเวลาให้ทราบตามคิวงานจริงหลังตรวจแบบ และไม่รับปากเวลาที่กระชั้นชิดเกินความเป็นไปได้เพื่อรักษาคุณภาพงาน"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ไม่มีไฟล์ 3D มีเพียงชิ้นงานเก่าที่แตกหัก หรือรูปถ่าย สามารถสั่งทำได้ไหม?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ทำได้ครับ เรามีบริการรับแกะแบบ (Reverse Engineering) คุณสามารถส่งชิ้นงานจริงมาให้เราวัดขนาดด้วยเวอร์เนียร์คาลิปเปอร์ หรือถ่ายรูปเทียบไม้บรรทัดตามคำแนะนำ เราจะขึ้นแบบ 3D และส่งไฟล์ Drawing ให้คุณตรวจสอบก่อนสั่งพิมพ์"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "รับผลิตขั้นต่ำกี่ชิ้น สั่ง 1 ชิ้นได้หรือไม่?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ไม่มีขั้นต่ำ (No MOQ) สามารถสั่งผลิตได้ตั้งแต่ 1 ชิ้น สำหรับงานต้นแบบทดสอบ หรืองานอะไหล่ด่วน ไปจนถึงงานผลิตจำนวนน้อยระดับ 5–200 ชิ้น เพื่อลดต้นทุนการเปิดแม่พิมพ์"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "เก็บไฟล์และแบบ Drawing ของลูกค้าเป็นความลับหรือไม่?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "เก็บไฟล์ CAD และ drawing ของลูกค้าเป็นความลับ ไม่เปิดเผยต่อสาธารณะ"
+            }
+          }
         ]
       }
     ]
@@ -73,128 +131,537 @@
   </script>
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="3D Industrial Parts home">
-      <img src="assets/brand-logo.jpg" alt="3D Industrial Parts">
-      <span>3D INDUSTRIAL PARTS</span>
-    </a>
-    <nav aria-label="เมนูหลัก">
-      <a href="#top">หน้าแรก</a>
-      <a href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์</a>
-      <a href="https://order.3dindustrialparts.com/materials">วัสดุ</a>
-      <a href="https://order.3dindustrialparts.com/about">เกี่ยวกับเรา</a>
-      <a href="https://order.3dindustrialparts.com/location">ที่ตั้ง</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="btn btn-small btn-ghost" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">ส่งแบบทาง LINE</a>
-      <a class="btn btn-small" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์</a>
+  <header class="site-header">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="3D Industrial Parts หน้าแรก">
+        <img src="assets/brand-logo.jpg" alt="3D Industrial Parts โลโก้" width="42" height="42">
+        <span>3D INDUSTRIAL PARTS</span>
+      </a>
+      <nav aria-label="เมนูหลัก">
+        <a href="#top">หน้าแรก</a>
+        <a href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์</a>
+        <a href="#applications">งานที่รับทำ</a>
+        <a href="#materials">คู่มือวัสดุ</a>
+        <a href="#real-proof">ผลงานจริง</a>
+        <a href="#faq">คำถามพบบ่อย</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-small btn-ghost" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">ส่งแบบทาง LINE</a>
+        <a class="btn btn-small" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์</a>
+      </div>
     </div>
   </header>
 
   <main id="top">
+    <!-- HERO SECTION -->
     <section class="hero hero-center">
+      <div class="hero-filament-shape hero-filament-1" aria-hidden="true"></div>
+      <div class="hero-filament-shape hero-filament-2" aria-hidden="true"></div>
       <div class="hero-copy">
+        <div class="hero-print-layer" aria-hidden="true"></div>
         <p class="eyebrow"><span></span> ENGINEERING 3D PRINTING</p>
-        <h1>รับพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม<br><em>ที่ผลิตมาเพื่อใช้งานจริง</em></h1>
-        <p class="lead">บริการ 3D Printing เชิงวิศวกรรมในประเทศไทย วิเคราะห์การใช้งาน เลือกวัสดุ และผลิตชิ้นส่วนสำหรับโรงงาน ผู้ผลิตเครื่องจักร ฝ่ายซ่อมบำรุง ทีม R&amp;D และผู้พัฒนาผลิตภัณฑ์</p>
+        <h1>รับพิมพ์ 3D ชิ้นส่วนอุตสาหกรรม <br class="hero-br"><em>ที่ผลิตมาเพื่อใช้งานจริง</em></h1>
+        <p class="lead">บริการ 3D Printing เชิงวิศวกรรมในประเทศไทย รองรับ PETG, ABS, ASA, Nylon, TPU และ Carbon Fiber สั่งพิมพ์ออนไลน์ 24 ชม. หรือส่งชิ้นงานจริงมาให้เราแกะแบบ 3D</p>
         <div class="hero-actions">
-          <span class="badge-24h" style="display:inline-block;margin:0 auto 10px;padding:6px 14px;border:1px solid var(--accent, #00a8ff);border-radius:999px;color:var(--accent, #00a8ff);font-weight:700;letter-spacing:.02em">● สั่งงานออนไลน์ได้ 24 ชั่วโมง</span>
-          <a class="btn btn-hero" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์ 24 ชม. <span>→</span></a>
-          <a class="btn btn-small btn-ghost" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">หรือส่งแบบ / ขอประเมินงานทาง LINE <span>↗</span></a>
+          <a class="btn btn-hero-cta" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์ 24 ชม. <span>→</span></a>
+          <a class="hero-line-link" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">หรือส่งแบบทาง LINE <span>↗</span></a>
+        </div>
+        <div class="hero-upload-affordance" aria-label="คำแนะนำการประเมินราคา">
+          <a class="hero-upload-link" href="https://order.3dindustrialparts.com/order">
+            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span><strong>มีไฟล์ 3D แล้ว?</strong> ลากไฟล์ STEP, STL, 3MF มาวางที่หน้าสั่งงานเพื่อคำนวณราคาประเมินอัตโนมัติทันที</span>
+            <span class="upload-arr" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
-      <figure class="hero-media" aria-label="ภาพจริงจากกล้องในเครื่องพิมพ์ 3D ของร้าน">
-        <video muted playsinline loop autoplay preload="metadata" poster="assets/media/poster-finished.jpg" aria-label="วิดีโอจริง ชิ้นงานพิมพ์ 3D สีขาวบนฐานพิมพ์ของเครื่อง">
-          <source src="assets/media/print-finished.mp4" type="video/mp4">
-        </video>
-        <figcaption><span>REAL PRINT</span> ภาพจากกล้องในเครื่องพิมพ์ ชิ้นงานจริงของร้าน</figcaption>
-      </figure>
-    </section>
 
-    <section class="proof-strip" aria-label="จุดเด่น">
-      <div><b>ใช้งานจริง</b><span>ออกแบบตามหน้าที่ของชิ้นส่วน</span></div>
-      <div><b>เลือกวัสดุตามงาน</b><span>แรง · ความร้อน · สารเคมี · UV</span></div>
-      <div><b>ควบคุม Revision</b><span>รองรับงานทดลองถึงผลิตซ้ำ</span></div>
-      <div><b>ประเมินก่อนผลิต</b><span>เห็นความเสี่ยงก่อนเสียเวลา</span></div>
-    </section>
-
-    <section id="process" class="section process">
-      <div class="process-head">
-        <div class="section-head compact">
-          <p class="eyebrow"><span></span> FROM FILE TO PART</p>
-          <h2>ส่งโจทย์มา ที่เหลือเป็นกระบวนการของเรา</h2>
+      <!-- PRICE CARDS SECTION -->
+      <section class="price-cards-section" id="options" aria-label="เลือกวิธีเริ่มงานของคุณ">
+        <div class="price-cards-head">
+          <p class="eyebrow"><span></span> เริ่มงานได้ 2 วิธี</p>
+          <h2>เลือกวิธีเริ่มงานของคุณ</h2>
+          <p class="price-cards-sub">รู้ราคาประเมินก่อนตัดสินใจ ยืนยันราคาจริงให้ก่อนเริ่มผลิตทุกครั้ง</p>
         </div>
-        <figure class="process-media">
-          <video muted playsinline loop preload="metadata" poster="assets/media/poster-timelapse.jpg" aria-label="วิดีโอไทม์แลปส์จริง ชิ้นงานค่อย ๆ ถูกพิมพ์ขึ้นรูปบนฐานพิมพ์">
+        <div class="price-cards-grid">
+          <!-- CARD A: PRINT -->
+          <article class="price-card" data-card="print">
+            <div class="card-bg-wrap">
+              <picture>
+                <source srcset="assets/media/card-print.webp" type="image/webp">
+                <img src="assets/media/card-print.jpg" alt="ชิ้นงานพิมพ์ 3D จริงบนฐานพิมพ์ของเครื่อง" width="1080" height="694" loading="eager" class="card-photo">
+              </picture>
+              <div class="card-dark-overlay" aria-hidden="true"></div>
+              <div class="card-glow" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-header">
+                <span class="card-badge"><span class="live-dot live-dot-print" aria-hidden="true"></span>มีไฟล์แล้ว</span>
+                <h3 class="card-title">
+                  <svg class="card-title-icon card-title-icon-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  <span>รับพิมพ์ 3D</span>
+                </h3>
+                <div class="card-pricing">
+                  <span class="card-from">ประเมินราคา</span>
+                  <span class="card-price-chip card-price-chip-num" style="display:none">฿100</span>
+                  <span class="card-price-chip card-price-chip-alt">ลากไฟล์ดูราคาทันที</span>
+                </div>
+                <p class="card-desc">อัปโหลดไฟล์ STL / 3MF / STEP ดูราคาประเมินได้ทันที</p>
+                <div class="card-chips" aria-label="วัสดุที่รองรับ">
+                  <span class="chip">PETG</span>
+                  <span class="chip">ASA</span>
+                  <span class="chip">PA</span>
+                  <span class="chip">TPU</span>
+                  <span class="chip">CF</span>
+                </div>
+              </div>
+              <ul class="card-features" aria-label="คุณสมบัติบริการ">
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>ประเมินราคาออนไลน์ 24 ชม.</span></li>
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>เลือกวัสดุตามสภาพใช้งานจริง</span></li>
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>ตรวจแบบก่อนผลิตทุกชิ้น</span></li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-card-primary card-stretched-link" href="https://order.3dindustrialparts.com/order">
+                  <span>อัปโหลดไฟล์ ดูราคา</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="card-line-link" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">
+                  <svg class="line-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  <span>LINE</span>
+                  <span class="line-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD B: REVERSE ENGINEERING -->
+          <article class="price-card" data-card="reverse">
+            <div class="card-bg-wrap">
+              <picture>
+                <source srcset="assets/media/dial-caliper-inspection.webp" type="image/webp">
+                <img src="assets/media/dial-caliper-inspection.jpg" alt="เวอร์เนียร์คาลิปเปอร์วัดชิ้นงานบนโต๊ะงานแกะแบบ" width="1600" height="900" loading="eager" class="card-photo">
+              </picture>
+              <svg class="card-blueprint" viewBox="0 0 540 380" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <pattern id="bp-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+                    <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(255,179,71,0.12)" stroke-width="0.5"/>
+                  </pattern>
+                  <marker id="bp-arr-start" viewBox="0 0 6 6" refX="1" refY="3" markerWidth="4" markerHeight="4" orient="auto">
+                    <path d="M 5 1 L 1 3 L 5 5 Z" fill="#ffb347"/>
+                  </marker>
+                  <marker id="bp-arr-end" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto">
+                    <path d="M 1 1 L 5 3 L 1 5 Z" fill="#ffb347"/>
+                  </marker>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#bp-grid)"/>
+                <g stroke="#ffb347" stroke-width="0.75" opacity="0.6">
+                  <line x1="50" y1="45" x2="490" y2="45" marker-start="url(#bp-arr-start)" marker-end="url(#bp-arr-end)"/>
+                  <line x1="50" y1="35" x2="50" y2="55"/>
+                  <line x1="490" y1="35" x2="490" y2="55"/>
+                  <text x="270" y="40" fill="#ffb347" font-family="'Chakra Petch', sans-serif" font-size="11" text-anchor="middle" letter-spacing="1">180.0 ±0.1 mm</text>
+                  <line x1="36" y1="70" x2="36" y2="330" marker-start="url(#bp-arr-start)" marker-end="url(#bp-arr-end)"/>
+                  <line x1="26" y1="70" x2="46" y2="70"/>
+                  <line x1="26" y1="330" x2="46" y2="330"/>
+                  <text x="30" y="205" fill="#ffb347" font-family="'Chakra Petch', sans-serif" font-size="11" text-anchor="middle" transform="rotate(-90 30 205)" letter-spacing="1">125.0 mm</text>
+                  <circle cx="380" cy="190" r="18" fill="none" stroke-dasharray="2,2"/>
+                  <line x1="355" y1="190" x2="405" y2="190"/>
+                  <line x1="380" y1="165" x2="380" y2="215"/>
+                  <text x="412" y="194" fill="#ffb347" font-family="'Chakra Petch', sans-serif" font-size="10">Ø 32.0 H7</text>
+                  <path d="M 15 25 L 15 15 L 25 15" fill="none" stroke-width="1.2"/>
+                  <path d="M 525 25 L 525 15 L 515 15" fill="none" stroke-width="1.2"/>
+                  <path d="M 15 355 L 15 365 L 25 365" fill="none" stroke-width="1.2"/>
+                  <path d="M 525 355 L 525 365 L 515 365" fill="none" stroke-width="1.2"/>
+                </g>
+              </svg>
+              <div class="card-dark-overlay" aria-hidden="true"></div>
+              <div class="card-glow" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-header">
+                <span class="card-badge"><span class="live-dot live-dot-reverse" aria-hidden="true"></span>ไม่มีไฟล์ก็เริ่มได้</span>
+                <h3 class="card-title">
+                  <svg class="card-title-icon card-title-icon-reverse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/><path d="M14 10l3-3"/></svg>
+                  <span>รับแกะแบบ</span>
+                </h3>
+                <div class="card-pricing">
+                  <span class="card-from">ประเมินราคา</span>
+                  <span class="card-price-chip card-price-chip-num" style="display:none">฿500</span>
+                  <span class="card-price-chip card-price-chip-alt">ตามชิ้นงานจริง</span>
+                  <span class="card-cond">ชิ้นเล็ก / รูปทรงไม่ซับซ้อน</span>
+                </div>
+                <p class="card-desc">มีชิ้นงานจริง ภาพ หรือสเก็ตช์ เราวัดและทำแบบ 3D ให้พร้อมพิมพ์</p>
+              </div>
+              <ul class="card-features" aria-label="คุณสมบัติบริการ">
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>วัดขนาดจากชิ้นงานจริงด้วยคาลิปเปอร์</span></li>
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>ส่งแบบ 3D ให้ตรวจก่อนพิมพ์</span></li>
+                <li><svg class="check-svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><span>แก้ไขแบบได้ตามรอบที่ตกลง</span></li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-card-primary card-stretched-link" href="https://order.3dindustrialparts.com/order">
+                  <span>ส่งชิ้นงานให้ประเมิน</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="card-line-link" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">
+                  <svg class="line-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  <span>LINE</span>
+                  <span class="line-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="price-cards-footnote">ระบบประเมินราคาเบื้องต้นจากไฟล์ 3D ทางร้านตรวจสอบความหนาผนัง โครงสร้าง และยืนยันราคาสุดท้ายก่อนเริ่มผลิตจริงทุกครั้ง</p>
+      </section>
+    </section>
+
+    <!-- 3-STEP "HOW IT WORKS" STRIP -->
+    <section class="section how-it-works-section" aria-label="ขั้นตอนการสั่งงาน 3 ขั้นตอน">
+      <div class="section-head compact">
+        <p class="eyebrow"><span></span> SIMPLE 3 STEPS</p>
+        <h2>วิธีสั่งงานพิมพ์ 3D ใน 3 ขั้นตอน</h2>
+        <p>กระบวนการทำงานที่ชัดเจน ไม่ซับซ้อน รวดเร็ว และตรวจสอบได้ทุกสเต็ป</p>
+      </div>
+      <div class="three-steps-grid">
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <span class="step-badge step-badge-01">
+              <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>01</span>
+            </span>
+            <span class="step-line" aria-hidden="true"></span>
+          </div>
+          <h3>ส่งไฟล์หรือตัวอย่างชิ้นงาน</h3>
+          <p>อัปโหลดไฟล์ STEP / STL / 3MF ผ่านหน้าสั่งงาน หรือหากไม่มีไฟล์ ให้ส่งชิ้นงานจริง/รูปพร้อมขนาดมาให้เราแกะแบบ 3D</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <span class="step-badge step-badge-02">
+              <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>02</span>
+            </span>
+            <span class="step-line" aria-hidden="true"></span>
+          </div>
+          <h3>เลือกวัสดุ &amp; ยืนยันราคาจริง</h3>
+          <p>เลือกเกรดวัสดุตามแรง ความร้อน และสภาพใช้งาน ทางร้านตรวจแบบและยืนยันราคาสุดท้ายให้คุณอนุมัติก่อนเริ่มผลิต</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <span class="step-badge step-badge-03">
+              <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span>03</span>
+            </span>
+          </div>
+          <h3>ผลิตมาตรฐาน &amp; จัดส่งถึงที่</h3>
+          <p>ควบคุมพารามิเตอร์การพิมพ์ ตรวจสอบขนาดจุดสำคัญ ลบคม บรรจุห่อกันกระแทก และจัดส่งพัสดุพร้อมแจ้งเลขติดตาม</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE MAKE FOR SECTION -->
+    <section class="section who-we-make-for" id="applications" aria-label="กลุ่มงานและผู้ใช้งานที่เราผลิตให้">
+      <div class="section-head">
+        <p class="eyebrow"><span></span> TARGET USE CASES</p>
+        <h2>งานประเภทไหนที่เหมาะกับบริการของเรา?</h2>
+        <p>บริการที่สร้างขึ้นเพื่อแก้ปัญหางานช่างซ่อมบำรุง วิศวกรโรงงาน และทีมวิจัยและพัฒนาผลิตภัณฑ์</p>
+      </div>
+      <div class="use-cases-grid">
+        <article class="use-case-card">
+          <div class="use-case-media">
+            <picture>
+              <source srcset="assets/media/workshop-machining.webp" type="image/webp">
+              <img src="assets/media/workshop-machining.jpg" alt="จิ๊กและฟิกซ์เจอร์สำหรับสายการผลิต" width="1600" height="1067" loading="lazy">
+            </picture>
+            <div class="use-case-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="use-case-body">
+            <span class="use-case-tag use-case-tag-jig">
+              <svg class="uc-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span>JIGS &amp; FIXTURES</span>
+            </span>
+            <h3>จิ๊กและฟิกซ์เจอร์ในโรงงาน</h3>
+            <p>อุปกรณ์จับยึดชิ้นงาน ตัวนำเจาะ บล็อกรองประกอบ และมือจับหุ่นยนต์ (EOAT) น้ำหนักเบา ผลิตได้รวดเร็ว ช่วยลดรอบเวลาในสายการผลิต</p>
+          </div>
+        </article>
+
+        <article class="use-case-card">
+          <div class="use-case-media">
+            <picture>
+              <source srcset="assets/media/machined-industrial-parts.webp" type="image/webp">
+              <img src="assets/media/machined-industrial-parts.jpg" alt="อะไหล่ทดแทนเครื่องจักรและชิ้นส่วนกลไก" width="1600" height="1067" loading="lazy">
+            </picture>
+            <div class="use-case-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="use-case-body">
+            <span class="use-case-tag use-case-tag-spare">
+              <svg class="uc-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <span>SPARE PARTS</span>
+            </span>
+            <h3>อะไหล่ทดแทนเครื่องจักร</h3>
+            <p>ทดแทนอะไหล่ที่เลิกผลิต สั่งของแท้จากต่างประเทศใช้เวลานาน หรือชิ้นส่วนที่แตกหัก เช่น บูช ฝาครอบ ข้อต่อ และซีลกันฝุ่น</p>
+          </div>
+        </article>
+
+        <article class="use-case-card">
+          <div class="use-case-media">
+            <picture>
+              <source srcset="assets/media/workshop-lathe.webp" type="image/webp">
+              <img src="assets/media/workshop-lathe.jpg" alt="งานผลิตชิ้นส่วนจำนวนน้อย 5 ถึง 200 ชิ้น" width="1600" height="1200" loading="lazy">
+            </picture>
+            <div class="use-case-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="use-case-body">
+            <span class="use-case-tag use-case-tag-batch">
+              <svg class="uc-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>SMALL BATCHES</span>
+            </span>
+            <h3>ผลิตจำนวนน้อย (5–200 ชิ้น)</h3>
+            <p>ผลิตเคส กล่องอุปกรณ์ และชิ้นส่วนสำหรับสินค้าทดลองตลาด โดยไม่ต้องเสียเวลาและงบประมาณเปิดแม่พิมพ์ฉีดพลาสติกหลักแสน</p>
+          </div>
+        </article>
+
+        <article class="use-case-card">
+          <div class="use-case-media">
+            <picture>
+              <source srcset="assets/media/gears-mechanical-assembly.webp" type="image/webp">
+              <img src="assets/media/gears-mechanical-assembly.jpg" alt="งานต้นแบบวิศวกรรมและชิ้นส่วนกลไก" width="1000" height="1333" loading="lazy">
+            </picture>
+            <div class="use-case-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="use-case-body">
+            <span class="use-case-tag use-case-tag-proto">
+              <svg class="uc-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>PROTOTYPES</span>
+            </span>
+            <h3>ต้นแบบฟังก์ชันและชิ้นส่วนกลไก</h3>
+            <p>ชิ้นงานต้นแบบสำหรับทดสอบการประกอบจริง (Fit Check) ทดลองวิ่งกลไกเฟือง ตรวจสอบความแข็งแรงก่อนตัดสินใจลงทุนผลิตระดับแมส</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLAIN-WORDS MATERIALS GUIDE -->
+    <section id="materials" class="section materials-guide-section" aria-label="คู่มือเลือกวัสดุวิศวกรรม">
+      <div class="section-head">
+        <p class="eyebrow"><span></span> MATERIALS GUIDE</p>
+        <h2>คู่มือเลือกวัสดุวิศวกรรมแบบเข้าใจง่าย</h2>
+        <p>เลือกวัสดุจากสภาพการใช้งานจริง—แรงที่ต้องรับ อุณหภูมิ สารเคมี และการโดนแดดกลางแจ้ง</p>
+      </div>
+      <div class="materials-plain-grid">
+        <div class="mat-card mat-card-pla">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ทั่วไป / ต้นแบบ</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;"><span style="width:9px;height:9px;border-radius:50%;background:#2563eb;display:inline-block;box-shadow:0 0 0 2px rgba(37,99,235,0.3);"></span>PLA CHIP</span>
+            </div>
+            <h3>PLA</h3>
+            <span class="mat-subtitle">ขึ้นรูปเร็ว · ผิวเนียน · ตรวจขนาด</span>
+          </div>
+          <p class="mat-desc">เหมาะสำหรับงานขึ้นรูปต้นแบบเพื่อตรวจสอบมิติ (Dimensional Check) และทดลองประกอบก่อนผลิตจริง พิมพ์ได้คมชัด ไม่หดตัว</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> ขึ้นรูปง่าย พิมพ์ได้คมชัด ราคาเข้าถึงง่าย</li>
+            <li><strong>เหมาะกับ:</strong> โมเดลทดสอบขนาด, ต้นแบบก่อนผลิตจริง</li>
+          </ul>
+        </div>
+
+        <div class="mat-card mat-card-petg">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ทนทานทั่วไป</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#ecfdf5;color:#047857;border:1px solid #a7f3d0;"><span style="width:9px;height:9px;border-radius:50%;background:#059669;display:inline-block;box-shadow:0 0 0 2px rgba(5,150,105,0.3);"></span>PETG CHIP</span>
+            </div>
+            <h3>PETG</h3>
+            <span class="mat-subtitle">เหนียว · ทนชื้น · สารเคมีเจือจาง</span>
+          </div>
+          <p class="mat-desc">วัสดุมาตรฐานสำหรับชิ้นส่วนใช้งานทั่วไป แข็งแรงกว่า PLA ไม่กรอบแตกง่าย ทนความชื้นและสารเคมีทำความสะอาด</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> ทนกระแทกปานกลาง ทนละอองน้ำและสารเคมี</li>
+            <li><strong>เหมาะกับ:</strong> เคสอุปกรณ์, ฝาครอบเครื่องจักร, จิ๊กประกอบ</li>
+          </ul>
+        </div>
+
+        <div class="mat-card mat-card-asa">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ทนแดด / ความร้อน</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;"><span style="width:9px;height:9px;border-radius:50%;background:#d97706;display:inline-block;box-shadow:0 0 0 2px rgba(217,119,6,0.3);"></span>ASA CHIP</span>
+            </div>
+            <h3>ABS / ASA</h3>
+            <span class="mat-subtitle">ทนความร้อนสูง · ทนรังสี UV · กลางแจ้ง</span>
+          </div>
+          <p class="mat-desc">ชิ้นส่วนที่ต้องทนความร้อนสูงเกิน 80°C หรือใช้งานกลางแดดตลอดเวลา โดย ASA มีคุณสมบัติทน UV ไม่เหลืองกรอบ</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> ทนความร้อนสูง ทนแดด ทนทานสภาพอากาศ</li>
+            <li><strong>เหมาะกับ:</strong> ชิ้นส่วนในห้องเครื่องยนต์, ขายึดกล้องภายนอก</li>
+          </ul>
+        </div>
+
+        <div class="mat-card mat-card-tpu">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ยืดหยุ่นสูง</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;"><span style="width:9px;height:9px;border-radius:50%;background:#7c3aed;display:inline-block;box-shadow:0 0 0 2px rgba(124,58,237,0.3);"></span>TPU CHIP</span>
+            </div>
+            <h3>TPU</h3>
+            <span class="mat-subtitle">ยืดหยุ่น · ซับแรงกระแทก · กันซึม</span>
+          </div>
+          <p class="mat-desc">พลาสติกประเภทยาง มีความยืดหยุ่นสูง คืนรูปได้ดี ไม่ฉีกขาดง่าย ทนต่อน้ำมันและสารหล่อลื่น</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> ซับแรงสั่นสะเทือน กันกระแทก กันน้ำซึม</li>
+            <li><strong>เหมาะกับ:</strong> ปะเก็น, ซีลกันฝุ่น, ยางรองแท่นเครื่อง, ปลอกสวม</li>
+          </ul>
+        </div>
+
+        <div class="mat-card mat-card-pa">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ชิ้นส่วนกลไก</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;"><span style="width:9px;height:9px;border-radius:50%;background:#dc2626;display:inline-block;box-shadow:0 0 0 2px rgba(220,38,38,0.3);"></span>PA CHIP</span>
+            </div>
+            <h3>PA / Nylon</h3>
+            <span class="mat-subtitle">เหนียวจัด · ทนเสียดสี · สึกหรอยาก</span>
+          </div>
+          <p class="mat-desc">พลาสติกวิศวกรรมสำหรับงานกลไก มีค่าสัมประสิทธิ์แรงเสียดทานต่ำ ทนแรงเฉือนและแรงบิดซ้ำๆ ได้ดี</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> เหนียวแน่น ทนต่อการขัดสี ไม่สึกหรอง่าย</li>
+            <li><strong>เหมาะกับ:</strong> เฟืองส่งกำลัง, บูชเลื่อน, ข้อต่อกลไก, แคลมป์</li>
+          </ul>
+        </div>
+
+        <div class="mat-card mat-card-cf">
+          <div class="mat-card-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
+              <span class="mat-badge">ความแข็งแกร่งสูงสุด</span>
+              <span class="mat-color-chip" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-family:'Chakra Petch',sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;"><span style="width:9px;height:9px;border-radius:50%;background:#1e293b;display:inline-block;box-shadow:0 0 0 2px rgba(30,41,59,0.3);"></span>CF CHIP</span>
+            </div>
+            <h3>Carbon Fiber Composite</h3>
+            <span class="mat-subtitle">PA-CF / PET-CF · แข็งตัวสูง · คงรูป</span>
+          </div>
+          <p class="mat-desc">พลาสติกผสมเส้นใยคาร์บอนสั้น ช่วยเพิ่มความแข็งแกร่ง (Stiffness) และลดการโก่งตัวภายใต้โหลดหนัก</p>
+          <ul class="mat-points">
+            <li><strong>จุดเด่น:</strong> แข็งแกร่งเทียบเท่าโลหะบางประเภท น้ำหนักเบา</li>
+            <li><strong>เหมาะกับ:</strong> ขายึดรับโหลดสูง, โครงสร้างเครื่อง, อุปกรณ์จับยึดหุ่นยนต์</li>
+          </ul>
+        </div>
+      </div>
+      <p class="materials-footnote">สอบถามสต็อกวัสดุได้ทาง LINE ทางร้านยินดีช่วยประเมินและเลือกวัสดุที่เหมาะกับงานของคุณ</p>
+    </section>
+
+    <!-- DEDICATED REAL PROOF SECTION (AUTHENTIC SHOP MEDIA ONLY) -->
+    <section class="section section-real-proof" id="real-proof" aria-label="ผลงานจริงจากเครื่องพิมพ์ของร้าน">
+      <div class="section-head">
+        <div class="real-badge-tag"><span class="real-dot" aria-hidden="true"></span> 100% REAL SHOP PRODUCTION</div>
+        <h2>ผลงานจริงจากเครื่องพิมพ์ของร้าน</h2>
+        <p>วิดีโอและภาพถ่ายในส่วนนี้เป็นผลงานจริงที่ผลิตขึ้นในร้าน 3D Industrial Parts ไม่ใช่ภาพสต็อกหรือโมเดลเรนเดอร์</p>
+      </div>
+
+      <div class="real-proof-grid">
+        <figure class="real-media-card">
+          <video muted playsinline loop autoplay preload="none" poster="assets/media/poster-finished.jpg" aria-label="วิดีโอจริง ชิ้นงานพิมพ์ 3D บนฐานพิมพ์ของเครื่อง">
+            <source src="assets/media/print-finished.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <span class="fig-badge">CAMERA FEED</span>
+            <b>ภาพบันทึกจากกล้องในห้องพิมพ์</b>
+            <p>ชิ้นส่วนวิศวกรรมสีขาวผลิตจริงบนฐานพิมพ์แบบมีเส้นใยควบคุมอุณหภูมิ</p>
+          </figcaption>
+        </figure>
+
+        <figure class="real-media-card">
+          <video muted playsinline loop preload="none" poster="assets/media/poster-timelapse.jpg" aria-label="วิดีโอไทม์แลปส์จริง การขึ้นรูปทีละเลเยอร์">
             <source src="assets/media/print-timelapse.mp4" type="video/mp4">
           </video>
-          <figcaption>ไทม์แลปส์จริงจากเครื่องของร้าน กดเล่นได้</figcaption>
+          <figcaption>
+            <span class="fig-badge">TIMELAPSE</span>
+            <b>วิดีโอไทม์แลปส์กระบวนการพิมพ์จริง</b>
+            <p>แสดงการสะสมเนื้อวัสดุเลเยอร์ต่อเลเยอร์ด้วยพารามิเตอร์ที่แม่นยำ</p>
+          </figcaption>
         </figure>
       </div>
-      <div class="steps-wrap">
-        <div class="quote-strip">
-          <div>
-            <h3>รู้ผลราคาภายใน 5 นาที</h3>
-            <p>ส่งไฟล์ผ่านหน้าเว็บ แล้วตรวจสอบราคาประเมินได้เองทันที</p>
-          </div>
-          <a class="btn" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์ <span>→</span></a>
+
+      <div class="real-proof-strip" aria-label="มาตรฐานการผลิตของร้าน">
+        <div class="rps-item">
+          <svg class="rps-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><b>ผลิตเพื่อใช้งานจริง</b><span>คำนวณทิศทางการพิมพ์ตามแนวรับแรง</span></div>
         </div>
-        <ol class="steps steps-main">
-          <li><span>01</span><div><b>ส่งแบบและข้อมูลใช้งาน</b><p>STEP / STL / 3MF หรือรูปพร้อมขนาด จำนวน และวันที่ต้องใช้</p></div></li>
-          <li><span>02</span><div><b>Engineering Review</b><p>วิเคราะห์แรง อุณหภูมิ สารเคมี UV และจุดที่ต้องควบคุมขนาด</p></div></li>
-          <li><span>03</span><div><b>เสนอวัสดุ ราคา และระยะเวลา</b><p>อธิบายทางเลือก ความเสี่ยง และขอบเขตงานก่อนเริ่มผลิต</p></div></li>
-        </ol>
-        <p class="steps-note">เป็นราคาประเมินเบื้องต้นจากไฟล์ ยืนยันราคาสุดท้ายหลังตรวจแบบ</p>
-        <ol class="steps steps-rest" start="4">
-          <li><span>04</span><div><b>ผลิตและตรวจสอบ</b><p>ควบคุมพารามิเตอร์ ลบคม เก็บงาน และตรวจจุดสำคัญตามข้อตกลง</p></div></li>
-          <li><span>05</span><div><b>ส่งมอบและผลิตซ้ำ</b><p>เก็บ Revision และข้อมูลการผลิตเพื่อรองรับการสั่งซ้ำ</p></div></li>
-        </ol>
+        <div class="rps-item">
+          <svg class="rps-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div><b>ราคาโปร่งใส</b><span>รู้ราคาประเมินทันที ยืนยันก่อนตัดเงิน</span></div>
+        </div>
+        <div class="rps-item">
+          <svg class="rps-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div><b>ควบคุม Revision</b><span>บันทึกประวัติไฟล์เพื่อรองรับการสั่งซ้ำ</span></div>
+        </div>
+        <div class="rps-item">
+          <svg class="rps-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div><b>รักษาความลับ</b><span>เก็บไฟล์และแบบของลูกค้าเป็นความลับ</span></div>
+        </div>
       </div>
     </section>
 
-    <section id="materials" class="section materials">
-      <div class="material-copy">
-        <p class="eyebrow"><span></span> MATERIAL FIT</p>
-        <h2>วัสดุที่เหมาะ เริ่มจากสภาพใช้งาน—not จากสีที่ชอบ</h2>
-        <p>เราจะยืนยันวัสดุหลังทราบหน้าที่ของชิ้นส่วนและผ่านการทดสอบกับเครื่องจริง</p>
-      </div>
-      <div class="material-grid">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-jig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="14" width="18" height="6"/><path d="M7 14V6h4v8M15 14v-5"/></symbol><symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.3 7.5-8 9-4.7-1.5-8-4.5-8-9V6z"/></symbol><symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8"/></symbol><symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></symbol><symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol><symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></symbol><symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l2-6h14l2 6v4H3zM3 15h18"/><circle cx="7.5" cy="17" r="1"/><circle cx="16.5" cy="17" r="1"/></symbol><symbol id="i-cable" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h6a4 4 0 010 8H8a3 3 0 000 6h12"/></symbol><symbol id="i-heat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c-3-3 0-5 0-8s-2-3-2-6M14 20c-3-3 0-5 0-8s-2-3-2-6M20 20c-3-3 0-5 0-8s-2-3-2-6"/></symbol><symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol><symbol id="i-hinge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="7" height="14"/><rect x="14" y="5" width="7" height="14"/><path d="M10 12h4"/></symbol><symbol id="i-slide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18M3 16h18"/><rect x="8" y="6" width="8" height="12"/></symbol><symbol id="i-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></symbol></svg>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="petg" data-photo="assets/media/materials/petg.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>PETG</b><span>ต้นแบบใช้งาน · ชิ้นส่วนทั่วไป</span></button><ul class="apps" aria-label="งานที่ใช้ PETG"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jig"/></svg>Jig และ Fixture น้ำหนักเบา</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>ฝาครอบและการ์ดป้องกัน</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-box"/></svg>เคสและกล่องอุปกรณ์</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cube"/></svg>ต้นแบบก่อนขึ้นรูปจริง</li></ul></div>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="asa" data-photo="assets/media/materials/asa.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>ASA</b><span>กลางแจ้ง · UV · ความร้อน</span></button><ul class="apps" aria-label="งานที่ใช้ ASA"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"/></svg>เคสและฝาครอบใช้งานนอกอาคาร</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>ขายึดเซนเซอร์/กล้อง</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-car"/></svg>ชิ้นส่วนตกแต่งและรถยนต์ภายนอก</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cable"/></svg>ที่จับยึดสายไฟกลางแดด</li></ul></div>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="pc" data-photo="assets/media/materials/pc.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>PC</b><span>แข็งแรง · ทนกระแทก · อุณหภูมิสูงขึ้น</span></button><ul class="apps" aria-label="งานที่ใช้ PC"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>ขายึดรับแรงกระแทก</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>การ์ดเครื่องจักร</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heat"/></svg>ชิ้นส่วนใกล้แหล่งความร้อน</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jig"/></svg>Fixture ที่ต้องการความแข็ง</li></ul></div>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="pa" data-photo="assets/media/materials/pa.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>PA / Nylon</b><span>เหนียว · เสียดสี · ชิ้นส่วนกลไก</span></button><ul class="apps" aria-label="งานที่ใช้ PA / Nylon"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gear"/></svg>เฟืองและบูช</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hinge"/></svg>บานพับ แคลมป์ สแนปฟิต</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-slide"/></svg>รางเลื่อนและตัวนำ</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cube"/></svg>อะไหล่ที่มีการเสียดสี</li></ul></div>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="tpu" data-photo="assets/media/materials/tpu.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>TPU</b><span>ยืดหยุ่น · กันกระแทก · ซีล</span></button><ul class="apps" aria-label="งานที่ใช้ TPU"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ring"/></svg>ปะเก็นและซีล</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>ตัวกันสะเทือนและกันกระแทก</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-box"/></svg>ยางรองและปลอกหุ้ม</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hinge"/></svg>ข้อต่ออ่อนและจุกยาง</li></ul></div>
-        <div class="mat"><button type="button" class="mat-btn" aria-expanded="false"><span class="mat-art" data-id="cf" data-photo="assets/media/materials/cf.jpg?v=20261014c" aria-hidden="true"><canvas width="640" height="300"></canvas></span><b>CF Composite</b><span>แข็งตัวสูง · คงรูปดี หลังทดสอบอนุมัติ</span></button><ul class="apps" aria-label="งานที่ใช้ CF Composite"><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>ขายึดโครงสร้างน้ำหนักเบา</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jig"/></svg>อุปกรณ์จับชิ้นงานหุ่นยนต์ (EOAT)</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jig"/></svg>Fixture ที่ต้องไม่งอ</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cube"/></svg>ชิ้นส่วนโครงเครื่อง</li></ul></div>
-        <p class="mat-note">ภาพประกอบสร้างด้วย AI เพื่อแสดงลักษณะวัสดุและตัวอย่างชิ้นงาน ไม่ใช่ภาพถ่ายงานจริงของร้าน</p>
-      </div>
-    </section>
-
-    <section class="section intake">
-      <div>
-        <p class="eyebrow"><span></span> FASTER QUOTATION</p>
-        <h2>ข้อมูลครบ ประเมินงานได้เร็วขึ้น</h2>
-      </div>
-      <div class="checklist">
-        <span>01 ไฟล์หรือรูปชิ้นงาน</span><span>02 ขนาดและจำนวน</span><span>03 หน้าที่ของชิ้นส่วน</span><span>04 แรงและอุณหภูมิ</span><span>05 สารเคมี น้ำ หรือ UV</span><span>06 จุดสำคัญและวันใช้งาน</span>
+    <!-- ENGINEERING REVIEW & INTAKE CHECKLIST -->
+    <section class="section intake-section">
+      <div class="intake-grid">
+        <div class="intake-copy">
+          <p class="eyebrow"><span></span> ENGINEERING REVIEW</p>
+          <h2>ข้อมูลครบถ้วน ประเมินงานได้แม่นยำและรวดเร็ว</h2>
+          <p>ส่งข้อมูลเหล่านี้มาพร้อมกับแบบ 3D หรือภาพถ่าย เพื่อให้ทีมช่างประเมินวัสดุและราคาได้ตรงตามโจทย์</p>
+          <div class="intake-actions">
+            <a class="btn" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ออนไลน์ <span>→</span></a>
+            <a class="btn btn-ghost" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">ปรึกษาทาง LINE <span>↗</span></a>
+          </div>
+        </div>
+        <div class="checklist">
+          <div class="check-item"><span class="check-num">01</span><span>ไฟล์ 3D (STEP / STL / 3MF) หรือรูปชิ้นงานพร้อมไม้บรรทัด</span></div>
+          <div class="check-item"><span class="check-num">02</span><span>จำนวนชิ้นงานและวันที่ต้องการใช้งาน</span></div>
+          <div class="check-item"><span class="check-num">03</span><span>หน้าที่การทำงานของชิ้นส่วน (รับแรง, สวมอัด, เลื่อน)</span></div>
+          <div class="check-item"><span class="check-num">04</span><span>อุณหภูมิใช้งานและแรงกระทำที่ชิ้นงานต้องเจอ</span></div>
+          <div class="check-item"><span class="check-num">05</span><span>สภาพแวดล้อม: ในร่ม, กลางแจ้งแดดจัด, โดนน้ำมันหรือสารเคมี</span></div>
+          <div class="check-item"><span class="check-num">06</span><span>จุดวิกฤตที่ต้องควบคุมขนาด (Critical Dimensions)</span></div>
+        </div>
       </div>
     </section>
 
-    <section id="faq" class="section faq">
-      <div class="section-head compact"><p class="eyebrow"><span></span> FAQ</p><h2>ก่อนส่งแบบ</h2></div>
+    <!-- HONEST FAQ SECTION (6 QUESTIONS) -->
+    <section id="faq" class="section faq-section">
+      <div class="section-head compact">
+        <p class="eyebrow"><span></span> FAQ</p>
+        <h2>คำถามที่พบบ่อยก่อนส่งแบบ</h2>
+        <p>คำตอบที่ตรงไปตรงมา ชัดเจน และไม่มีข้อผูกมัดที่ไม่เป็นจริง</p>
+      </div>
       <div class="faq-list">
-        <details open><summary>รับพิมพ์ 3D สำหรับใช้งานจริงหรือไม่?</summary><p>รับครับ เราผลิต Functional Parts สำหรับใช้งานจริง โดยเลือกวัสดุ โครงสร้าง และทิศทางการพิมพ์ตามแรง อุณหภูมิ สารเคมี แสง UV และสภาพแวดล้อมของงาน</p></details>
-        <details><summary>ไม่มีไฟล์ 3D ส่งรูปหรือชิ้นงานตัวอย่างได้ไหม?</summary><p>ได้ครับ ส่งชิ้นงานตัวอย่าง Drawing แบบร่าง หรือรูปหลายมุมพร้อมขนาดหลักและหน้าที่ของชิ้นส่วน เราจะประเมินความเป็นไปได้ในการสร้างแบบและผลิตก่อนเสนอราคา</p></details>
-        <details><summary>รับผลิตขั้นต่ำกี่ชิ้น?</summary><p>รับตั้งแต่งานต้นแบบ 1 ชิ้นจนถึงงานผลิตจำนวนน้อยประมาณ 5–200 ชิ้น โดยตรวจความเหมาะสมของแบบ วัสดุ และกระบวนการก่อนเสนอราคา</p></details>
-        <details><summary>ใช้วัสดุอะไรได้บ้าง?</summary><p>วัสดุที่ประเมินให้ได้แก่ PETG, ASA, PC, PA/Nylon, TPU และวัสดุเสริมใย โดยจะยืนยันชนิดและเกรดหลังทราบแรง ความร้อน สารเคมี สภาพกลางแจ้ง และจุดควบคุมขนาด</p></details>
-        <details><summary>ต้องส่งข้อมูลอะไรเพื่อประเมินราคา?</summary><p>ส่งไฟล์ STEP, STL หรือ 3MF หรือรูปพร้อมขนาด ระบุจำนวน หน้าที่การใช้งาน แรง อุณหภูมิ สารเคมี จุดควบคุมขนาด และวันที่ต้องการใช้ ยิ่งข้อมูลครบ ยิ่งประเมินได้ตรงและเร็ว</p></details>
-        <details><summary>รับประกันความแข็งแรงได้หรือไม่?</summary><p>ชิ้นส่วนจะถูกประเมินตามข้อมูลที่ได้รับ งานรับแรงสำคัญต้องมีข้อมูลโหลดและทดสอบจริงก่อนใช้งาน ไม่รับผลิตชิ้นส่วนความปลอดภัยโดยไม่มีข้อมูลวิศวกรรมรองรับ</p></details>
-        <details><summary>เก็บไฟล์ของลูกค้าเป็นความลับหรือไม่?</summary><p>รองรับข้อตกลง NDA และสามารถกำหนดผู้เข้าถึง ระยะเวลาเก็บไฟล์ และการลบข้อมูลหลังจบโครงการได้</p></details>
+        <details open>
+          <summary>รองรับไฟล์ 3D นามสกุลใดบ้าง?</summary>
+          <p>ระบบรองรับไฟล์ <strong>STEP (.step, .stp), STL (.stl) และ 3MF (.3mf)</strong> โดยทางร้านแนะนำให้ส่งไฟล์ STEP สำหรับงานวิศวกรรม เนื่องจากเป็นข้อมูล B-Rep ที่รักษาความแม่นยำของเส้นผ่านศูนย์กลางรูเจาะและระนาบประกบได้สมบูรณ์</p>
+        </details>
+        <details>
+          <summary>ราคาที่คำนวณบนหน้าเว็บเป็นราคาสุดท้ายเลยหรือไม่?</summary>
+          <p>ราคาบนหน้าเว็บเป็นราคาประเมินเบื้องต้นจากปริมาตรเนื้อวัสดุและเวลาพิมพ์ ทางทีมวิศวกรของร้านจะตรวจสอบความหนาผนัง โครงสร้างรับแรง และทิศทางการพิมพ์ จากนั้นจะยืนยันราคาสุดท้ายให้คุณอนุมัติก่อนเริ่มดำเนินการผลิตจริงทุกครั้ง</p>
+        </details>
+        <details>
+          <summary>ใช้เวลาผลิตและจัดส่งกี่วัน มีการรับประกันเวลาแน่นอนหรือไม่?</summary>
+          <p>ระยะเวลาการผลิตขึ้นอยู่กับคิวงานจริงของเครื่องพิมพ์ในขณะนั้น ความยาวนานของรอบพิมพ์ และขั้นตอนตรวจสอบขนาด เราจะแจ้งประมาณการเวลาให้ทราบตามคิวงานจริงหลังตรวจแบบ และไม่รับปากเวลาที่กระชั้นชิดเกินความเป็นไปได้เพื่อรักษาคุณภาพงาน</p>
+        </details>
+        <details>
+          <summary>ไม่มีไฟล์ 3D มีเพียงชิ้นงานเก่าที่แตกหัก หรือรูปถ่าย สามารถสั่งทำได้ไหม?</summary>
+          <p>ทำได้ครับ เรามีบริการรับแกะแบบ (Reverse Engineering) คุณสามารถส่งชิ้นงานจริงมาให้เราวัดขนาดด้วยเวอร์เนียร์คาลิปเปอร์ หรือถ่ายรูปเทียบไม้บรรทัดตามคำแนะนำ เราจะขึ้นแบบ 3D และส่งไฟล์ Drawing ให้คุณตรวจสอบก่อนสั่งพิมพ์</p>
+        </details>
+        <details>
+          <summary>รับผลิตขั้นต่ำกี่ชิ้น สั่ง 1 ชิ้นได้หรือไม่?</summary>
+          <p>ไม่มีขั้นต่ำ (No MOQ) สามารถสั่งผลิตได้ตั้งแต่ 1 ชิ้น สำหรับงานต้นแบบทดสอบ หรือนานอะไหล่ด่วน ไปจนถึงงานผลิตจำนวนน้อยระดับ 5–200 ชิ้น เพื่อลดต้นทุนการเปิดแม่พิมพ์</p>
+        </details>
+        <details>
+          <summary>เก็บไฟล์และแบบ Drawing ของลูกค้าเป็นความลับหรือไม่?</summary>
+          <p>เก็บไฟล์ CAD และ drawing ของลูกค้าเป็นความลับ ไม่เปิดเผยต่อสาธารณะ</p>
+        </details>
       </div>
     </section>
 
+    <!-- CLOSING CTA SECTION -->
     <section class="closing">
-      <div><p class="eyebrow"><span></span> READY TO REVIEW</p><h2>มีแบบแล้ว ส่งมาให้เราประเมินก่อนผลิต</h2><p>ส่งไฟล์ STEP / STL / 3MF หรือรูปพร้อมขนาดทาง LINE</p></div>
+      <div>
+        <p class="eyebrow"><span></span> READY TO PRINT</p>
+        <h2>มีแบบแล้ว ส่งมาให้เราประเมินก่อนผลิต</h2>
+        <p>อัปโหลดไฟล์ผ่านเว็บสั่งงาน 24 ชม. หรือส่งรูปและขนาดมาพูดคุยทาง LINE</p>
+      </div>
       <div class="closing-actions">
         <a class="btn btn-large" href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์ 24 ชม. <span>→</span></a>
         <a class="btn btn-large btn-ghost" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">ส่งแบบทาง LINE <span>↗</span></a>
@@ -202,12 +669,27 @@
     </section>
   </main>
 
-  <footer><div class="brand foot-brand"><img src="assets/brand-logo.jpg" alt=""><span>3D INDUSTRIAL PARTS</span></div><p>Industrial 3D Printing · Engineering Parts · Thailand</p><p>© 2026 3D Industrial Parts</p></footer>
-  <div class="mobile-cta">
-    <a href="https://order.3dindustrialparts.com/order">สั่งงานพิมพ์ 3D ออนไลน์</a>
-    <a class="mc-line" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">LINE</a>
+  <footer>
+    <div class="brand foot-brand">
+      <img src="assets/brand-logo.jpg" alt="" width="42" height="42" loading="lazy">
+      <span>3D INDUSTRIAL PARTS</span>
+    </div>
+    <p>Industrial 3D Printing · Engineering Parts · Thailand</p>
+    <p>© 2026 3D Industrial Parts. All rights reserved.</p>
+  </footer>
+
+  <!-- STICKY MOBILE CTA BAR -->
+  <div class="mobile-cta" role="navigation" aria-label="แถบสั่งงานด่วนบนมือถือ">
+    <a class="mc-order" href="https://order.3dindustrialparts.com/order">
+      <svg class="mc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      <span>สั่งงานพิมพ์ออนไลน์</span>
+    </a>
+    <a class="mc-line" href="https://line.me/R/ti/p/%40494plfkr" target="_blank" rel="noopener">
+      <svg class="mc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>LINE</span>
+    </a>
   </div>
-  <script src="assets/script.js?v=20261014c"></script>
-  <script src="assets/print-fx.js?v=20261014a"></script><!-- PRINT-FX -->
+
+  <script src="assets/script.js?v=20261019c"></script>
 </body>
 </html>

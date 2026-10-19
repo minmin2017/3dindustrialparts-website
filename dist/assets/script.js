@@ -4,7 +4,7 @@
   if (rm) { v.forEach(function(x){ x.removeAttribute('autoplay'); x.pause(); x.controls = true; }); }
   if (!rm && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: .12});
-    document.querySelectorAll('.steps li,.proof-strip>div,.material-grid>div,.checklist>span,.closing,.process-media,.faq-list details').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+    document.querySelectorAll('.step-card, .use-case-card, .mat-card, .real-media-card, .check-item, .faq-list details, .closing, .rps-item, .price-card').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
     var vo = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.target.hasAttribute('autoplay')) return; if (e.isIntersecting) { e.target.play().catch(function(){}); } else { e.target.pause(); } }); }, {threshold: .35});
     v.forEach(function(x){ vo.observe(x); });
   } else { v.forEach(function(x){ x.controls = true; }); }
@@ -100,4 +100,60 @@
     c.addEventListener('mat:open', o.replay);
     c.addEventListener('mat:close', function(){ cancelAnimationFrame(raf); done(); });
   });
+})();
+
+/* PRICE CARDS INTERACTIVE GLOW & OBSERVER */
+(function(){
+  var cards = document.querySelectorAll('.price-card');
+  if (!cards.length) return;
+  function updateCoords(card, e) {
+    var r = card.getBoundingClientRect();
+    var x = ((e.clientX - r.left) / r.width) * 100;
+    var y = ((e.clientY - r.top) / r.height) * 100;
+    card.style.setProperty('--mx', x.toFixed(1) + '%');
+    card.style.setProperty('--my', y.toFixed(1) + '%');
+  }
+  cards.forEach(function(card){
+    card.addEventListener('pointermove', function(e){
+      updateCoords(card, e);
+    });
+    card.addEventListener('pointerdown', function(e){
+      updateCoords(card, e);
+    });
+    card.addEventListener('pointerleave', function(){
+      card.style.setProperty('--mx', '50%');
+      card.style.setProperty('--my', '50%');
+    });
+  });
+  var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!rm && 'IntersectionObserver' in window) {
+    var cardIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('pulse-in');
+          cardIo.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(c){ cardIo.observe(c); });
+  }
+})();
+
+
+/* PRICE CHIP VISIBILITY CONFIG HANDLER */
+(function(){
+  try {
+    var showChips = (typeof SHOW_PRICE_CHIPS !== 'undefined') ? SHOW_PRICE_CHIPS : false;
+    var numChips = document.querySelectorAll('.card-price-chip-num');
+    var altChips = document.querySelectorAll('.card-price-chip-alt');
+    if (showChips) {
+      numChips.forEach(function(el){ el.style.display = ''; });
+      altChips.forEach(function(el){ el.style.display = 'none'; });
+    } else {
+      numChips.forEach(function(el){ el.style.display = 'none'; });
+      altChips.forEach(function(el){ el.style.display = ''; });
+    }
+  } catch (err) {
+    console.error('Error applying SHOW_PRICE_CHIPS config:', err);
+  }
 })();
